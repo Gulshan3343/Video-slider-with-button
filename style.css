@@ -1,69 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+body {
+  background: #fafafa;
+  padding-top: 60px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 50px;
+  background: white;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1001;
+}
+nav .logo p {
+  font-size: 40px;
+  font-weight: bold;
+  float: left;
+  color: rgb(88, 88, 196);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  list-style: none;
 }
 
-.calculator{
-    border: 1px solid #717377;
-    padding: 20px;
-    border-radius: 16px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
-
+nav li {
+  display: inline-block;
+  list-style: none;
 }
 
-input{
-    width: 320px;
-    border: none;
-    padding: 24px;
-    margin: 10px;
-    background:rgb(59, 59, 59);
-    border-radius: 10px;
-    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
-    font-size: 40px;
-    text-align: right;
-    cursor: pointer;
-    color: #ffffff;
+nav li a {
+  font-size: 15px;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
 }
 
-input::placeholder{
-    color: #ffffff;
+nav li a:hover {
+  background: rgb(201, 201, 201);
+  color: rgb(88, 88, 196);
+  transition: all 0.25s ease;
 }
 
-button{
-    border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 50%;
-    background: transparent;
-    color: #ffffff;
-    font-size: 20px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
-    cursor: pointer;
+#submenu {
+  opacity: 0;
+  position: absolute;
+  top: 30px;
+  visibility: hidden;
+  z-index: 1000;
+  display: block;
 }
 
-.equalBtn{
-    background-color: #fb7c14;
+li:hover ul#submenu {
+  opacity: 1;
+  top: 55px;
+  visibility: visible;
 }
 
-.operator{
-    background-color: #fb7c14;
+#submenu li {
+  float: none;
+  width: 100%;
 }
 
-.operator1{
-    background-color:grey
+#submenu a:hover {
+  background: rgb(201, 201, 201);
+}
+
+#submenu a {
+  background: white;
+}
+
+img {
+  width: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
